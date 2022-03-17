@@ -1,0 +1,67 @@
+@mixin article-position {
+  display: flex;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+@mixin article-any{
+  & > div h3{
+    @include article-position;
+    margin-bottom: 10px;
+  }
+  & > div{
+    @include article-position;
+    text-align: start;
+    & > div div{
+      font-size: 1.2rem;
+      color: #7c828e
+    }
+  }
+}
+
+@mixin icon-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  width: 100px;
+  height: 48px;
+  border-radius: 5px;
+  background-color: #6875f5;
+}
+
+.article-container{
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  width: 684px;
+  .main-article{
+    margin-bottom: 30px;
+    & > h1{
+      @include article-position;
+      margin-bottom: 20px;
+    }
+    & > div{
+      @include article-position;
+      text-align: start;
+      font-size: 1.2rem;
+      color: #7c828e
+    }
+  }
+  .first-article{
+    margin-bottom: 30px;
+    i.icon{
+      @include icon-box;
+    }
+    @include article-any;
+  }
+  .second-article{
+    i.icon{
+      @include icon-box;
+    }
+    @include article-any;
+  }
+  .article-peace{
+    margin-left: 20px;
+  }
+}

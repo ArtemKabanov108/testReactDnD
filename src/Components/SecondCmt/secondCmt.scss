@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  margin-top: 10%;
+  justify-content: center;
+  align-items: center;
+  .task-box{
+    height: 350px;
+    .draggable{
+      margin: 20px;
+    }
+}
+}

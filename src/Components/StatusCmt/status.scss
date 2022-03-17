@@ -1,0 +1,35 @@
+.commonStyle{
+  display: flex;
+  height: 24px;
+  margin-left: auto;
+  border-radius: 25px;
+  padding: 2px 8px;
+  font-weight: 600;
+  span {
+    margin-right: 5px;
+  }
+}
+.Processing{
+  @extend .commonStyle;
+  background-color: #fde9d7;
+  color: #c97447;
+  span {
+    color: #fc8653;
+  }
+}
+.Success{
+  @extend .commonStyle;
+  background-color: #dcf8ed;
+  color: #29856b;
+  span {
+    color: #46b776;
+  }
+}
+.Failed{
+  @extend .commonStyle;
+  background-color: #fae7e5;
+  color: #d85c60;
+  span {
+    color: #fb8381;
+  }
+}
